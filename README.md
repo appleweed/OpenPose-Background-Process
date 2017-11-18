@@ -8,4 +8,4 @@ mywrapper.cpp is based on the OpenPose example wrapper, 1_user_asynchronous.cpp.
 Notes:
 - skeleton_daemon() completely wraps the background daemon functionality. Comment out the call to this function in main() if you want the wrapper to run in the foreground and print out debug info.
 - UserInputClass is used to monitor for new "jpg" files. (Change to add other image types.) These files are collected for processing and the originals are deleted from the directory path so as not be processed again.
-- getFilesOnDirectory() inside fileSystem.cpp was changed to not throw an error() if not files are found, but rather just return an empty vector. This allows the background daemon to continue monitoring for new images without errors.
+- getFilesOnDirectory() inside fileSystem.cpp was changed to not throw an error() if no files are found, but rather just return an empty vector. This allows the background daemon to continue monitoring for new images without errors.
